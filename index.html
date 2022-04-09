@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>lab9</title>
+        <title>lab 10</title>
         
 		<!--put your external stylesheet links here-->
 		<link rel="stylesheet" href="css/styles.css">
@@ -11,17 +11,28 @@
 		<link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css" />
 		<!-- link to leaflet scripts -->
 		<script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+		
 
+		
 		<!--you can also place internal styles here; you would place these within <style> tags-->
     </head>
 
     <body>
         <!--put your initial page content here-->
-		<div id="div1">
+		<div id="div1">			
+		<p> Q2. The styles variable is creating an empty object. From there, inside the curly brackets, various keys are set and contain js objects themselves. The conditional statement is making sure only point data will be altered by the style script underneath. This function resulted in my map switching from blue, classic point icons to clear circles. <br>
+		    Q4. Feature refers to the actual geojson feature which contains each individual stations's data. Layer refers to what is rendered on the map, styling and all. <br>
+			Q5. layer.options.fill seems to be a boolean operation which results in true or false while layer.getLatLng outputs the features' latitude and longitude as the name suggests. <br>
+			Q6. The circles marking my stations have gotten much larger an dthere is no longer a fill of colour inside. </p>
 		</div>
 		<div id="mapdiv">
-			
 		</div>
+		
+		<select class="li-nav" name="mapdropdown" id="mapdropdown" onChange="loadMap(this.value);">
+			<option value="map0" selected="selected" disabled>Load a map</option>
+			<option value='mapa'>Amtrack Stations</option>
+			<option value='mapb'>Megacities</option>
+		</select>
 		
         <!--you can also use this space for internal scripts; you would place these within <script> tags-->
 
